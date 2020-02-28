@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="__ROOT__/App/Admin/Public/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="__ROOT__/App/Admin/Public/css/main.css" />
+    <script type="text/javascript" src="__ROOT__/App/Admin/Public/js/libs/modernizr.min.js"></script>
+</head>
+
+<body>
+    <include file="Common/head" />
+    <div class="container clearfix">
+        <include file="Common/sidebar" />
+        <!--/sidebar-->
+        <div class="main-wrap">
+
+            <div class="crumb-wrap">
+                <div class="crumb-list"><i class="icon-font"></i><a href="__URL__/Index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">栏目管理</a><span class="crumb-step">&gt;</span><span>新增栏目</span></div>
+            </div>
+            <div class="result-wrap">
+                <div class="result-content">
+                    <form action="__URL__/update" method="post" id="myform" name="myform">
+                        <table class="insert-tab" width="100%">
+                            <tbody>
+
+                                <tr>
+                                    <th><i class="require-red">*</i>友情链接标题：</th>
+                                    <td>
+
+                                        <input class="common-text required" id="title" name="title" size="50" type="text" placeholder="请输入友情链接标题" value="{$flink.title}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="require-red">*</i>友情链接URL：</th>
+                                    <td>
+
+                                        <input class="common-text required" id="title" name="url" size="50" type="text" placeholder="请输入友情链接URL" value="{$flink.url}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><i class="require-red">*</i>友情链接描述：</th>
+                                    <td>
+                                        <input type="hidden" name='id' value="{$flink.id}">
+                                        <input class="common-text required" id="title" name="desc" size="50" type="text" placeholder="请输入友情链接描述" value="{$flink.desc}">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <td>
+                                        <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                        <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!--/main-->
+    </div>
+</body>
+
+</html>
